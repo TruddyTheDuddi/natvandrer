@@ -1,0 +1,126 @@
+@font-face {
+    font-family: chinese_rocks;
+    src: url("../font/chinese_rocks.ttf");
+}
+
+body{
+    background-color: rgb(33, 33, 34);
+    color: rgb(238, 240, 241);
+    /* background-image: url("../img/bg_dark.png"); */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 30px;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.main_container{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.title_block{
+    display: grid;
+    margin: 40px 0 100px 0;
+}
+
+.title{
+    font-family: chinese_rocks;
+    font-size: 100px;
+    color: rgb(191, 255, 40);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.9), 3px 3px 10px rgba(0,0,0,.4);
+}
+
+.txt_relief{
+    font-family: chinese_rocks;
+    position: absolute;
+    color: rgb(21, 200, 245);
+    left: 0;
+    top: -130px;
+    z-index: -1;
+    font-size: 400px;
+    width: 100vw;
+    min-height: 600px;
+    overflow: hidden;
+
+    pointer-events: none;
+
+    /* background: -webkit-linear-gradient(200deg, rgb(21, 245, 197) 0%, rgb(43, 177, 255) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+    /* text-shadow: 4px 4px rgb(32, 32, 32); */
+}
+
+.txt_relief div{
+    /* transform: rotate(-2deg) translateX(-100px); */
+    transform: rotate(-2deg) translateX(-1px) scale(1.05);
+    margin-bottom: -200px;
+}
+
+.tagline{
+    font-family: chinese_rocks;
+    font-size: 34px;
+    text-shadow: 2px 2px 0 rgba(0,0,0,.5);
+
+    padding: 5px 15px 5px 30px;
+    background: rgb(255, 10, 214);
+    margin: auto;
+    margin-left: -50px;
+    clip-path: polygon(5% 1%, 100% 3%, 98% 92%, 0 100%);
+}
+
+.navig_bar{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: chinese_rocks;
+    text-shadow: 1.5px 1.5px 0 rgba(0,0,0,0.6);
+    position: relative;
+    align-items: center;
+}
+
+.navig_bar a{
+    margin: 15px;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) transform 0.2s, cubic-bezier(0.215, 0.610, 0.355, 1) text-shadow 0.2s;
+    cursor: pointer;
+}
+
+.navig_bar .left_bar{
+    margin-left: auto;
+}
+
+.navig_bar a:hover{
+    text-shadow: 3px 3px 0 rgb(255, 10, 214);
+    transform: scale(1.15) rotate(-1deg);
+}
+
+.navig_bar .or:hover {
+    text-shadow: 3px 3px 0 rgb(255, 100, 10);
+    transform: scale(1.15) rotate(1.8deg);
+}
+
+
+.navig_bar .blu:hover {
+    text-shadow: 3px 3px 0 rgb(5, 134, 240);
+    transform: scale(1.15) rotate(1.5deg);
+}
+
+.navig_bar .purp:hover {
+    text-shadow: 3px 3px 0 rgb(157, 10, 255);
+    transform: scale(1.15) rotate(-1.2deg);
+}
+
+.navig_bar .art{
+    position: absolute;
+    height: calc(100% - 15px);
+    width: 64%;
+    background-color: rgba(255,255,255,0.1);
+    z-index: -1;
+    clip-path: polygon(1% 1%, 100% 9%, 98% 88%, 0 100%);
+}
