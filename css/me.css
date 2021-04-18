@@ -6,9 +6,9 @@
 body{
     background-color: rgb(33, 33, 34);
     color: rgb(238, 240, 241);
-    /* background-image: url("../img/bg_dark.png"); */
+    background-image: url("../img/background.png");
     background-position: top;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: cover;
     font-size: 30px;
 }
@@ -60,7 +60,7 @@ a{
 
 .txt_relief div{
     /* transform: rotate(-2deg) translateX(-100px); */
-    transform: rotate(-2deg) translateX(-1px) scale(1.05);
+    transform: rotate(-2deg) translateX(-10px);
     margin-bottom: -200px;
 }
 
