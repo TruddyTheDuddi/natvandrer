@@ -50,6 +50,8 @@ a{
 
     pointer-events: none;
 
+    mix-blend-mode: color-dodge;
+
     /* background: -webkit-linear-gradient(200deg, rgb(21, 245, 197) 0%, rgb(43, 177, 255) 100%);
     background-clip: text;
     -webkit-background-clip: text;
