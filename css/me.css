@@ -214,7 +214,6 @@ a{
     box-shadow: 3px 3px 0 rgba(0,0,0,.45);
     cursor: pointer;
     transition: transform 0.3s;
-    border-radius: 0 50px 0 0;
 }
 
 .page_content .qna_box:hover{
@@ -271,4 +270,30 @@ a{
     color: rgb(191, 255, 40);
     /* font-family: chinese_rocks;
     font-size: 22px; */
+}
+
+/* Home */
+.home_title{
+    font-family: chinese_rocks;
+    font-size: 30px;
+    display: flex;
+    margin: 20px auto;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.4);
+}
+
+.home_title .right{
+    background-color: rgba(15, 15, 15, 0.5);
+    margin: auto;
+    padding: 30px 40px 40px 30px;
+    clip-path: polygon(1% 1%, 100% 9%, 98% 88%, 0 100%);
+}
+
+.home_title .title{
+    font-size: 70px;
+    color: rgb(191, 255, 40);
+    margin-left: 10px;
+}
+
+.home_title span{
+    color:rgb(21, 200, 245);
 }
