@@ -3,6 +3,11 @@
     src: url("../font/chinese_rocks.ttf");
 }
 
+@font-face {
+    font-family: roboto;
+    src: url("../font/roboto.ttf");
+}
+
 body{
     background-color: rgb(33, 33, 34);
     color: rgb(238, 240, 241);
@@ -10,7 +15,8 @@ body{
     background-position: top;
     background-repeat: repeat-y;
     background-size: cover;
-    font-size: 30px;
+    font-family: roboto;
+    font-size: 16px;
 }
 
 a{
@@ -19,7 +25,7 @@ a{
 }
 
 .main_container{
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 10px;
 }
@@ -29,11 +35,13 @@ a{
     margin: 40px 0 100px 0;
 }
 
-.title{
+.title_block .title{
     font-family: chinese_rocks;
     font-size: 100px;
     color: rgb(191, 255, 40);
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.9), 3px 3px 10px rgba(0,0,0,.4);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6), 3px 3px 10px rgba(0,0,0,.4);
+    filter: drop-shadow(inset 5px 5px rgba(0,0,0,0.8));
+
 }
 
 .txt_relief{
@@ -66,7 +74,7 @@ a{
     margin-bottom: -200px;
 }
 
-.tagline{
+.title_block .tagline{
     font-family: chinese_rocks;
     font-size: 34px;
     text-shadow: 2px 2px 0 rgba(0,0,0,.5);
@@ -85,6 +93,7 @@ a{
     text-shadow: 1.5px 1.5px 0 rgba(0,0,0,0.6);
     position: relative;
     align-items: center;
+    font-size: 30px;
 }
 
 .navig_bar a{
@@ -92,6 +101,8 @@ a{
     transition: cubic-bezier(0.215, 0.610, 0.355, 1) transform 0.2s, cubic-bezier(0.215, 0.610, 0.355, 1) text-shadow 0.2s;
     cursor: pointer;
     user-select: none;
+    display: flex;
+    align-items: center;
 }
 
 .navig_bar .left_bar{
@@ -103,18 +114,18 @@ a{
     transform: scale(1.15) rotate(-1deg);
 }
 
-.navig_bar .or:hover {
+.navig_bar .or:hover{
     text-shadow: 3px 3px 0 rgb(255, 142, 35);
     transform: scale(1.15) rotate(1.8deg);
 }
 
 
-.navig_bar .blu:hover {
+.navig_bar .blu:hover{
     text-shadow: 3px 3px 0 rgb(5, 134, 240);
     transform: scale(1.15) rotate(1.5deg);
 }
 
-.navig_bar .purp:hover {
+.navig_bar .purp:hover{
     text-shadow: 3px 3px 0 rgb(154, 31, 255);
     transform: scale(1.15) rotate(-1.2deg);
 }
@@ -122,8 +133,139 @@ a{
 .navig_bar .art{
     position: absolute;
     height: calc(100% - 15px);
-    width: 64%;
+    width: 100%;
+    max-width: 580px;
     background-color: rgba(255,255,255,0.1);
     z-index: -1;
     clip-path: polygon(1% 1%, 100% 9%, 98% 88%, 0 100%);
+}
+
+.navig_bar .pfp{
+    width: 36px;
+    height: 36px;
+    margin: auto 7px;
+    /* clip-path: polygon(0 0, 100% 0%, 90% 100%, 0 100%); */
+    box-shadow: 3px 3px 0 rgba(0,0,0,.4);
+}
+
+.navig_bar .at{
+    color: rgb(191, 255, 40);
+    margin: 4px;
+}
+
+/* Page content */
+
+.page_content{
+    margin: 50px 0;
+    display: grid;
+}
+
+.page_content .box{
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px;
+    margin: 20px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.box .title{
+    font-size: 28px;
+}
+
+.page_content .title_box{
+    max-width: 750px;
+    transform: rotate(-2deg);
+    border-left: 3.5px solid rgb(204, 102, 252);
+}
+
+.p_header{
+    margin: 15px;
+}
+
+.p_header .title{
+    font-size: 68px;
+    margin-left: 10px;
+    font-family: chinese_rocks;
+    color: rgb(204, 102, 252);
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.6);
+}
+
+.p_header .subtitle{
+    font-size: 18px;
+}
+
+.page_content .inner_content{
+    margin: 30px 20px;
+}
+
+.page_content .inner_content_faq{
+    margin-top: -30px;
+    padding-top: 60px;
+    background-image: url("../img/path_faq2.svg");
+    background-position: top;
+    background-size: cover;
+}
+
+.page_content .qna_box{
+    max-width: 530px;
+    position: relative;
+    padding: 20px;
+    margin: 30px 20px;
+    box-shadow: 3px 3px 0 rgba(0,0,0,.45);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.page_content .qna_box:hover{
+    /* transform: scale(1.02); */
+}
+
+.page_content .qna_box .title{
+    margin-left: 36px;
+}
+
+.page_content .qna_box_l{
+    margin-left: auto;
+}
+
+.page_content .qna_box_r{
+    margin-right: auto;
+}
+
+.qna_box .q_number{
+    position: absolute;
+    left: -40px;
+    font-size: 64px;
+    width: 76px;
+    height: 76px;
+    border-radius: 100px;
+    top: -20px;
+    font-family: chinese_rocks;
+    background-color: rgb(204, 102, 252);
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4),
+                2px 2px 0px rgb(136, 71, 163);
+    text-align: center;
+    background-image: url(../img/nb_img.png);
+    background-size: 120px;
+    background-position: top;
+
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1)  0.2s transform;
+}
+
+.qna_box:hover .q_number{
+    transform: scale(1.1) rotate(3deg) translate(-5px, -5px);
+}
+
+.qna_box .answer{
+    background-color: rgba(0,0,0,0.2);
+    margin: 15px -20px -20px -20px;
+    padding: 30px;
+    border-top: rgba(255,255,255,0.1) 2px solid;
+}
+
+.qna_box a{
+    color: rgb(191, 255, 40);
+    /* font-family: chinese_rocks;
+    font-size: 22px; */
 }
