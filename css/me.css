@@ -201,7 +201,7 @@ a{
 .page_content .inner_content_faq{
     margin-top: -30px;
     padding-top: 60px;
-    background-image: url("../img/path_faq2.svg");
+    background-image: url("../img/path_faq4.svg");
     background-position: top;
     background-size: cover;
 }
@@ -214,6 +214,7 @@ a{
     box-shadow: 3px 3px 0 rgba(0,0,0,.45);
     cursor: pointer;
     transition: transform 0.3s;
+    border-radius: 0 50px 0 0;
 }
 
 .page_content .qna_box:hover{
@@ -226,10 +227,12 @@ a{
 
 .page_content .qna_box_l{
     margin-left: auto;
+    transform: rotate(-1deg);
 }
 
 .page_content .qna_box_r{
     margin-right: auto;
+    transform: rotate(1deg);
 }
 
 .qna_box .q_number{
