@@ -195,10 +195,11 @@ a{
 }
 
 .page_content .inner_content{
-    margin: 30px 20px;
+    margin: 30px 0;
 }
 
 .page_content .inner_content_faq{
+    margin: 30px 20px;
     margin-top: -30px;
     padding-top: 60px;
     background-image: url("../img/path_faq4.svg");
@@ -279,21 +280,85 @@ a{
     display: flex;
     margin: 20px auto;
     text-shadow: 3px 3px 0 rgba(0,0,0,0.4);
+    align-items: flex-end;
+}
+
+.home_title .left{
+
 }
 
 .home_title .right{
-    background-color: rgba(15, 15, 15, 0.5);
+
+}
+
+.home_title .subtitle{
+    background-color: rgba(255, 255, 255, 0.1);
     margin: auto;
-    padding: 30px 40px 40px 30px;
+    padding: 30px 40px 30px 30px;
     clip-path: polygon(1% 1%, 100% 9%, 98% 88%, 0 100%);
+    background-image: url(../img/header_bar.svg);
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
 }
 
 .home_title .title{
     font-size: 70px;
     color: rgb(191, 255, 40);
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
-.home_title span{
-    color:rgb(21, 200, 245);
+.home_title .highlight{
+    color: rgb(255, 142, 35);
+}
+
+.inner_content_bio{
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2.5px dashed rgba(191, 255, 40,0.2);
+    box-shadow: inset 3px 3px 10px rgba(0,0,0,0.4);
+    padding: 20px;
+    border-radius: 20px;
+    transform: rotate(-1deg);
+    margin: 0 -50px;
+    background-image: url(../img/sidepath_1.svg);
+    background-position: -150px -150px;
+    background-size: 500px;
+    background-repeat: no-repeat;
+}
+
+.bio_box{
+    margin: 10px;
+}
+
+.bio_box_left{
+    margin-right: auto;
+    max-width: 600px;
+}
+.bio_box_right{
+    margin-left: auto;
+    max-width: 600px;
+}
+
+.bio_box a{
+    color: rgb(191, 255, 40);
+    font-size: 20px;
+}
+
+.bio_box .title{
+    font-size: 30px;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    margin: auto;
+    padding: 20px 40px 20px 50px;
+    clip-path: polygon(0 0, 100% 0%, 97% 88%, 0.5% 100%);
+    background-image: url(../img/title_bar.svg);
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.4);
+}
+
+.bio_box .content{
+    margin: 30px 10px;
+    margin-left: 38px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
 }
