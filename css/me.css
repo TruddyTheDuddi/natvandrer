@@ -312,18 +312,16 @@ a{
     color: rgb(255, 142, 35);
 }
 
-.inner_content_bio{
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 2.5px dashed rgba(191, 255, 40,0.2);
+.bio_box .content{
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 2.5px dashed rgba(191, 255, 40, 0.3);
     box-shadow: inset 3px 3px 10px rgba(0,0,0,0.4);
-    padding: 20px;
+    padding: 10px 25px;
     border-radius: 20px;
     transform: rotate(-1deg);
-    margin: 0 -50px;
-    background-image: url(../img/sidepath_1.svg);
-    background-position: -150px -150px;
-    background-size: 500px;
-    background-repeat: no-repeat;
+    margin: 0;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    margin: 20px 5px;
 }
 
 .bio_box{
@@ -332,11 +330,11 @@ a{
 
 .bio_box_left{
     margin-right: auto;
-    max-width: 600px;
+    max-width: 650px;
 }
 .bio_box_right{
     margin-left: auto;
-    max-width: 600px;
+    max-width: 650px;
 }
 
 .bio_box a{
@@ -357,8 +355,149 @@ a{
     text-shadow: 3px 3px 0 rgba(0,0,0,0.4);
 }
 
-.bio_box .content{
-    margin: 30px 10px;
-    margin-left: 38px;
-    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+/* Blög */
+
+.blog_container{
+    max-width: 600px;
+}
+
+.blog_box{
+
+}
+
+.blog_box a{
+    color: rgb(191, 255, 40);
+}
+
+
+.blog_box .info_box{
+    display: flex;
+    align-items: center;
+}
+
+.info_box .pfp{
+    position: relative;
+    margin-right: 30px;
+}
+
+.info_box .pfp img{
+    width: 80px;
+    height: 80px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    display: block;
+    z-index: 1;
+}
+
+.info_box .pfp::after{
+    content: "";
+    position: absolute;
+    width: 75px;
+    display: block;
+    height: 75px;
+    background-color: rgb(191, 255, 40);
+    z-index: -1;
+    top: -5px;
+    left: 20px;
+    transform: rotate(-2.1deg);
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.4);
+    background-image: url(../img/nb_img.png);
+    background-size: cover;
+}
+
+
+.info_box .pfp::before{
+    content: "";
+    position: absolute;
+    width: 110px;
+    border-radius: 0 0 100px 0;
+    display: block;
+    height: 100px;
+    background-color: rgb(255, 142, 35);
+    z-index: -1;
+    top: -5px;
+    left: -11px;
+    transform: rotate(9deg);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    background-image: url(../img/nb_img.png);
+    background-size: cover;
+}
+
+.blog_box .inner{
+    border-left: 2.5px dashed rgb(191, 255, 40);
+    padding-left: 25px;
+    margin-left: 5px;
+}
+
+.blog_box .title{
+    font-size: 78px;
+    font-family: chinese_rocks;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.4);
+    margin-top: 10px;
+    position: relative;
+}
+
+.blog_box .content{
+    font-size: 18px;
+}
+
+.img_reactor{
+    width: 100%;
+    border-radius: 8px;
+    margin: 10px 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.img_reactor img{
+    max-width: 100%;
+    display: block;
+    max-height: 80vh;
+    margin: 0 auto;
+}
+
+.blog_box .author{
+    margin: 10px;
+}
+
+.blog_box .author .username{
+    font-size: 18px;
+}
+
+.blog_box .author .username img{
+    height: 16px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.blog_box .author .date{
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.tags_box{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tags_box .tag{
+    background: rgba(0,0,0,0.5);
+    margin: 5px;
+    padding: 8px 15px;
+    clip-path: polygon(5% 8%, 100% 0%, 100% 90%, 0 100%);
+    border: 1.5px dashed rgb(21, 200, 245);
+    cursor: pointer;
+    transition: 0.2s transform;
+}
+
+.tag span{
+    color: rgb(21, 200, 245);
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 2px;
+}
+
+.tag:hover{
+    transform: scale(1.1);
 }
